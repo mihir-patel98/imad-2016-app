@@ -5,12 +5,83 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var articleone = {
+    title: 'Article one Mihir Patel',
+    heading: 'Article one',
+    date: '25 sept 2016',
+    content: `             <p>
+                                
+                                 http://mihir-patel98.imad.hasura-app.io/
+                                 http://mihir-patel98.imad.hasura-app.io/
+
+
+                            </p>
+                            <p>
+                                 This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live coding
+                            </p>
+                            <p>
+                                 This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live coding
+                            </p>
+                            `
+    
+};
+
+
+function createtemplate(data){
+
+var date = data.date;
+var title = data.title;
+var heading = data.heading;
+var content = data.content;
+
+var htmltemplate =`
+<html>
+    <head>
+        <title>
+          ${title}
+            </title>
+            
+            <link href="/ui/style.css" rel="stylesheet" />
+             </head>
+            
+            <body>
+                <div class = "container" >
+                <div>
+                    <a href ='/'>Home</a>
+                    </div>
+                    <hr/>
+                    <h3>
+                        ${}
+                        <diheadingv>
+                            ${date}
+                        </div>
+                        <div>
+                            ${content}
+                        </div>
+                    </h3>
+                    </div>
+                    
+                </body>
+        
+</html>
+
+
+
+
+
+`;
+return htmptemplate
+}
+
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one',function(req,res){
-res.sendFile(path.join(__dirname, 'ui', 'article-one.html*'));
+res.send(createtemplate(articleone));
 });
 
 app.get('/article-two',function(req,res){
