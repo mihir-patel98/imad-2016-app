@@ -6,7 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleone = {
+var article = {
+'article-one' : {
     title: 'Article one Mihir Patel',
     heading: 'Article one',
     date: '25 sept 2016',
@@ -26,6 +27,46 @@ var articleone = {
                             `
     
 };
+
+'article-two' : { `
+    title: 'Article one Mihir Patel',
+    heading: 'Article one',
+    date: '25 sept 2016',
+    content: `             <p>
+                                
+                                 http://mihir-patel98.imad.hasura-app.io/
+                                 http://mihir-patel98.imad.hasura-app.io/
+
+
+                            </p>
+                            <p>
+                                 This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live coding
+                            </p>
+            `                
+                         
+                            `};
+
+'article-three' :  { title: 'Article one Mihir Patel',
+    heading: 'Article one',
+    date: '25 sept 2016',
+    content: `             <p>
+                                
+                                 http://mihir-patel98.imad.hasura-app.io/
+                                 http://mihir-patel98.imad.hasura-app.io/
+
+
+                            </p>
+                            <p>
+                                 This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live coding
+                            </p>
+                            <p>
+                                 This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live coding This is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live codingThis is my first html live coding
+                            </p>
+                            `                            
+};
+
+
+}
 
 
 function createtemplate(data){
